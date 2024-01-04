@@ -11,6 +11,7 @@ export const useCartStore = defineStore('cart', {
         async fetchData() {
             let response = await fetch('./product.json');
             this.products = await response.json();
+            console.log(this.products)
         },
         addToCart(product) {
             // toast("success adding to cart", { autoClose: 1000, });
